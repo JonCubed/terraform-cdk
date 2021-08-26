@@ -21,11 +21,9 @@ namespace MyCompany.MyApp
             DynamodbTable table = new DynamodbTable(this, "Hello", new DynamodbTableConfig {
                 Name = $"my-first-table-{region.Name}",
                 HashKey = "temp",
-                Attribute = new [] {
-                    new DynamodbTableAttribute {
-                        Name = "id",
-                        Type = "S"
-                    }
+                Attribute = new DynamodbTableAttribute {
+                    Name = "id",
+                    Type = "S"
                 },
                 BillingMode = "PAY_PER_REQUEST"
             });

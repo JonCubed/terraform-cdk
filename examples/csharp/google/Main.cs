@@ -29,19 +29,13 @@ namespace MyCompany.MyApp
             new ComputeInstance(this, "ComputeInstance", new ComputeInstanceConfig {
                 Name = "cdktf-instance",
                 MachineType = "f1-micro",
-                BootDisk = new [] {
-                    new ComputeInstanceBootDisk {
-                        InitializeParams = new [] {
-                            new ComputeInstanceBootDiskInitializeParams {
-                                Image = "debian-cloud/debian-9"
-                            }
-                        }
+                BootDisk = new ComputeInstanceBootDisk {
+                    InitializeParams = new ComputeInstanceBootDiskInitializeParams {
+                        Image = "debian-cloud/debian-9"
                     }
                 },
-                NetworkInterface = new [] {
-                    new ComputeInstanceNetworkInterface {
-                        Network = network.Name
-                    }
+                NetworkInterface = new ComputeInstanceNetworkInterface {
+                    Network = network.Name
                 },
                 Tags = new [] {
                     "web",
