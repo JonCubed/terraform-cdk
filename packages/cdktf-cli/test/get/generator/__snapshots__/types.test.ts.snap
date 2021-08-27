@@ -58,7 +58,7 @@ export class BooleanList extends cdktf.TerraformResource {
   // foo_required - computed: false, optional: false, required: true
   private _fooRequired: boolean[];
   public get fooRequired() {
-    return this.interpolationForAttribute('foo_required') as any;
+    return this.getBooleanAttribute('foo_required');
   }
   public set fooRequired(value: boolean[]) {
     this._fooRequired = value;
@@ -71,7 +71,7 @@ export class BooleanList extends cdktf.TerraformResource {
   // foo_optional - computed: false, optional: true, required: false
   private _fooOptional?: boolean[];
   public get fooOptional() {
-    return this.interpolationForAttribute('foo_optional') as any;
+    return this.getBooleanAttribute('foo_optional');
   }
   public set fooOptional(value: boolean[] ) {
     this._fooOptional = value;
@@ -177,7 +177,7 @@ export class BooleanMap extends cdktf.TerraformResource {
   // foo_optional - computed: false, optional: true, required: false
   private _fooOptional?: { [key: string]: boolean };
   public get fooOptional() {
-    return this.interpolationForAttribute('foo_optional') as any;
+    return this.getBooleanAttribute('foo_optional');
   }
   public set fooOptional(value: { [key: string]: boolean } ) {
     this._fooOptional = value;
@@ -536,7 +536,7 @@ export interface ComputedOptionalComplexEgress {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/aws/r/computed_optional_complex.html#self ComputedOptionalComplex#self}
   */
-  readonly selfAttribute?: boolean;
+  readonly selfAttribute?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/aws/r/computed_optional_complex.html#to_port ComputedOptionalComplex#to_port}
   */
@@ -1201,15 +1201,15 @@ export interface PrimitiveBooleanConfig extends cdktf.TerraformMetaArguments {
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/aws/r/primitive_boolean.html#foo_computed_optional PrimitiveBoolean#foo_computed_optional}
   */
-  readonly fooComputedOptional?: boolean;
+  readonly fooComputedOptional?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/aws/r/primitive_boolean.html#foo_optional PrimitiveBoolean#foo_optional}
   */
-  readonly fooOptional?: boolean;
+  readonly fooOptional?: boolean | cdktf.IResolvable;
   /**
   * Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/aws/r/primitive_boolean.html#foo_required PrimitiveBoolean#foo_required}
   */
-  readonly fooRequired: boolean;
+  readonly fooRequired: boolean | cdktf.IResolvable;
 }
 
 /**
@@ -1254,11 +1254,11 @@ export class PrimitiveBoolean extends cdktf.TerraformResource {
   }
 
   // foo_computed_optional - computed: true, optional: true, required: false
-  private _fooComputedOptional?: boolean;
+  private _fooComputedOptional?: boolean | cdktf.IResolvable;
   public get fooComputedOptional() {
     return this.getBooleanAttribute('foo_computed_optional');
   }
-  public set fooComputedOptional(value: boolean) {
+  public set fooComputedOptional(value: boolean | cdktf.IResolvable) {
     this._fooComputedOptional = value;
   }
   public resetFooComputedOptional() {
@@ -1270,11 +1270,11 @@ export class PrimitiveBoolean extends cdktf.TerraformResource {
   }
 
   // foo_optional - computed: false, optional: true, required: false
-  private _fooOptional?: boolean;
+  private _fooOptional?: boolean | cdktf.IResolvable;
   public get fooOptional() {
     return this.getBooleanAttribute('foo_optional');
   }
-  public set fooOptional(value: boolean ) {
+  public set fooOptional(value: boolean | cdktf.IResolvable ) {
     this._fooOptional = value;
   }
   public resetFooOptional() {
@@ -1286,11 +1286,11 @@ export class PrimitiveBoolean extends cdktf.TerraformResource {
   }
 
   // foo_required - computed: false, optional: false, required: true
-  private _fooRequired: boolean;
+  private _fooRequired: boolean | cdktf.IResolvable;
   public get fooRequired() {
     return this.getBooleanAttribute('foo_required');
   }
-  public set fooRequired(value: boolean) {
+  public set fooRequired(value: boolean | cdktf.IResolvable) {
     this._fooRequired = value;
   }
   // Temporarily expose input value. Use with caution.

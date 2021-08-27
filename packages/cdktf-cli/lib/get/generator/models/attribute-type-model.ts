@@ -55,6 +55,9 @@ export class AttributeTypeModel {
       return `${this._type}[]`;
     if (this.isList && this.isComputed && this.isComplex)
       return `${this._type}`;
+
+    if (this._type === TokenizableTypes.BOOLEAN)
+      return `boolean | cdktf.IResolvable`;
     return this._type;
   }
 
@@ -87,7 +90,7 @@ export class AttributeTypeModel {
   }
 
   public get isBoolean(): boolean {
-    return this.name === TokenizableTypes.BOOLEAN || this.isBooleanMap;
+    return this._type === TokenizableTypes.BOOLEAN || this.isBooleanMap;
   }
 
   public get isStringMap(): boolean {
