@@ -45,6 +45,7 @@ export class TerraformResource
   extends TerraformElement
   implements ITerraformResource, ITerraformDependable
 {
+  public static readonly terraformResourceType = "resource" as string; // Implemented on extending classes
   public readonly terraformResourceType: string;
   public readonly terraformGeneratorMetadata?: TerraformProviderGeneratorMetadata;
 
