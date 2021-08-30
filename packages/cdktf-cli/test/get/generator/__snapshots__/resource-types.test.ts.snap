@@ -1150,7 +1150,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // cache_behavior - computed: false, optional: true, required: false
   private _cacheBehavior?: CloudfrontDistributionCacheBehavior[];
   public get cacheBehavior() {
-    return this.interpolationForAttribute('cache_behavior') as any;
+    return (this.getListAttribute('cache_behavior') as any) as CloudfrontDistributionCacheBehavior[];
   }
   public set cacheBehavior(value: CloudfrontDistributionCacheBehavior[]) {
     this._cacheBehavior = value;
@@ -1166,7 +1166,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // custom_error_response - computed: false, optional: true, required: false
   private _customErrorResponse?: CloudfrontDistributionCustomErrorResponse[];
   public get customErrorResponse() {
-    return this.interpolationForAttribute('custom_error_response') as any;
+    return (this.getListAttribute('custom_error_response') as any) as CloudfrontDistributionCustomErrorResponse[];
   }
   public set customErrorResponse(value: CloudfrontDistributionCustomErrorResponse[]) {
     this._customErrorResponse = value;
@@ -1182,7 +1182,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // default_cache_behavior - computed: false, optional: false, required: true
   private _defaultCacheBehavior: CloudfrontDistributionDefaultCacheBehavior[];
   public get defaultCacheBehavior() {
-    return this.interpolationForAttribute('default_cache_behavior') as any;
+    return (this.getListAttribute('default_cache_behavior') as any) as CloudfrontDistributionDefaultCacheBehavior[];
   }
   public set defaultCacheBehavior(value: CloudfrontDistributionDefaultCacheBehavior[]) {
     this._defaultCacheBehavior = value;
@@ -1195,7 +1195,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // logging_config - computed: false, optional: true, required: false
   private _loggingConfig?: CloudfrontDistributionLoggingConfig[];
   public get loggingConfig() {
-    return this.interpolationForAttribute('logging_config') as any;
+    return (this.getListAttribute('logging_config') as any) as CloudfrontDistributionLoggingConfig[];
   }
   public set loggingConfig(value: CloudfrontDistributionLoggingConfig[]) {
     this._loggingConfig = value;
@@ -1211,7 +1211,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // ordered_cache_behavior - computed: false, optional: true, required: false
   private _orderedCacheBehavior?: CloudfrontDistributionOrderedCacheBehavior[];
   public get orderedCacheBehavior() {
-    return this.interpolationForAttribute('ordered_cache_behavior') as any;
+    return (this.getListAttribute('ordered_cache_behavior') as any) as CloudfrontDistributionOrderedCacheBehavior[];
   }
   public set orderedCacheBehavior(value: CloudfrontDistributionOrderedCacheBehavior[]) {
     this._orderedCacheBehavior = value;
@@ -1227,7 +1227,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // origin - computed: false, optional: false, required: true
   private _origin: CloudfrontDistributionOrigin[];
   public get origin() {
-    return this.interpolationForAttribute('origin') as any;
+    return (this.getListAttribute('origin') as any) as CloudfrontDistributionOrigin[];
   }
   public set origin(value: CloudfrontDistributionOrigin[]) {
     this._origin = value;
@@ -1240,7 +1240,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // origin_group - computed: false, optional: true, required: false
   private _originGroup?: CloudfrontDistributionOriginGroup[];
   public get originGroup() {
-    return this.interpolationForAttribute('origin_group') as any;
+    return (this.getListAttribute('origin_group') as any) as CloudfrontDistributionOriginGroup[];
   }
   public set originGroup(value: CloudfrontDistributionOriginGroup[]) {
     this._originGroup = value;
@@ -1256,7 +1256,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // restrictions - computed: false, optional: false, required: true
   private _restrictions: CloudfrontDistributionRestrictions[];
   public get restrictions() {
-    return this.interpolationForAttribute('restrictions') as any;
+    return (this.getListAttribute('restrictions') as any) as CloudfrontDistributionRestrictions[];
   }
   public set restrictions(value: CloudfrontDistributionRestrictions[]) {
     this._restrictions = value;
@@ -1269,7 +1269,7 @@ export class CloudfrontDistribution extends cdktf.TerraformResource {
   // viewer_certificate - computed: false, optional: false, required: true
   private _viewerCertificate: CloudfrontDistributionViewerCertificate[];
   public get viewerCertificate() {
-    return this.interpolationForAttribute('viewer_certificate') as any;
+    return (this.getListAttribute('viewer_certificate') as any) as CloudfrontDistributionViewerCertificate[];
   }
   public set viewerCertificate(value: CloudfrontDistributionViewerCertificate[]) {
     this._viewerCertificate = value;
@@ -2333,7 +2333,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // cors_rule - computed: false, optional: true, required: false
   private _corsRule?: S3BucketCorsRule[];
   public get corsRule() {
-    return this.interpolationForAttribute('cors_rule') as any;
+    return (this.getListAttribute('cors_rule') as any) as S3BucketCorsRule[];
   }
   public set corsRule(value: S3BucketCorsRule[]) {
     this._corsRule = value;
@@ -2349,7 +2349,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // grant - computed: false, optional: true, required: false
   private _grant?: S3BucketGrant[];
   public get grant() {
-    return this.interpolationForAttribute('grant') as any;
+    return (this.getListAttribute('grant') as any) as S3BucketGrant[];
   }
   public set grant(value: S3BucketGrant[]) {
     this._grant = value;
@@ -2365,7 +2365,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // lifecycle_rule - computed: false, optional: true, required: false
   private _lifecycleRule?: S3BucketLifecycleRule[];
   public get lifecycleRule() {
-    return this.interpolationForAttribute('lifecycle_rule') as any;
+    return (this.getListAttribute('lifecycle_rule') as any) as S3BucketLifecycleRule[];
   }
   public set lifecycleRule(value: S3BucketLifecycleRule[]) {
     this._lifecycleRule = value;
@@ -2381,7 +2381,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // logging - computed: false, optional: true, required: false
   private _logging?: S3BucketLogging[];
   public get logging() {
-    return this.interpolationForAttribute('logging') as any;
+    return (this.getListAttribute('logging') as any) as S3BucketLogging[];
   }
   public set logging(value: S3BucketLogging[]) {
     this._logging = value;
@@ -2397,7 +2397,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // object_lock_configuration - computed: false, optional: true, required: false
   private _objectLockConfiguration?: S3BucketObjectLockConfiguration[];
   public get objectLockConfiguration() {
-    return this.interpolationForAttribute('object_lock_configuration') as any;
+    return (this.getListAttribute('object_lock_configuration') as any) as S3BucketObjectLockConfiguration[];
   }
   public set objectLockConfiguration(value: S3BucketObjectLockConfiguration[]) {
     this._objectLockConfiguration = value;
@@ -2413,7 +2413,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // replication_configuration - computed: false, optional: true, required: false
   private _replicationConfiguration?: S3BucketReplicationConfiguration[];
   public get replicationConfiguration() {
-    return this.interpolationForAttribute('replication_configuration') as any;
+    return (this.getListAttribute('replication_configuration') as any) as S3BucketReplicationConfiguration[];
   }
   public set replicationConfiguration(value: S3BucketReplicationConfiguration[]) {
     this._replicationConfiguration = value;
@@ -2429,7 +2429,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // server_side_encryption_configuration - computed: false, optional: true, required: false
   private _serverSideEncryptionConfiguration?: S3BucketServerSideEncryptionConfiguration[];
   public get serverSideEncryptionConfiguration() {
-    return this.interpolationForAttribute('server_side_encryption_configuration') as any;
+    return (this.getListAttribute('server_side_encryption_configuration') as any) as S3BucketServerSideEncryptionConfiguration[];
   }
   public set serverSideEncryptionConfiguration(value: S3BucketServerSideEncryptionConfiguration[]) {
     this._serverSideEncryptionConfiguration = value;
@@ -2445,7 +2445,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // versioning - computed: false, optional: true, required: false
   private _versioning?: S3BucketVersioning[];
   public get versioning() {
-    return this.interpolationForAttribute('versioning') as any;
+    return (this.getListAttribute('versioning') as any) as S3BucketVersioning[];
   }
   public set versioning(value: S3BucketVersioning[]) {
     this._versioning = value;
@@ -2461,7 +2461,7 @@ export class S3Bucket extends cdktf.TerraformResource {
   // website - computed: false, optional: true, required: false
   private _website?: S3BucketWebsite[];
   public get website() {
-    return this.interpolationForAttribute('website') as any;
+    return (this.getListAttribute('website') as any) as S3BucketWebsite[];
   }
   public set website(value: S3BucketWebsite[]) {
     this._website = value;
@@ -2750,7 +2750,7 @@ export class SecurityGroup extends cdktf.TerraformResource {
   // egress - computed: true, optional: true, required: false
   private _egress?: SecurityGroupEgress[];
   public get egress() {
-    return this.interpolationForAttribute('egress') as any;
+    return (this.getListAttribute('egress') as any) as SecurityGroupEgress[];
   }
   public set egress(value: SecurityGroupEgress[]) {
     this._egress = value;
@@ -2771,7 +2771,7 @@ export class SecurityGroup extends cdktf.TerraformResource {
   // ingress - computed: true, optional: true, required: false
   private _ingress?: SecurityGroupIngress[];
   public get ingress() {
-    return this.interpolationForAttribute('ingress') as any;
+    return (this.getListAttribute('ingress') as any) as SecurityGroupIngress[];
   }
   public set ingress(value: SecurityGroupIngress[]) {
     this._ingress = value;

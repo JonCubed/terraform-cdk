@@ -135,11 +135,15 @@ export class AttributesEmitter {
     if (type.isBoolean) {
       return `this.getBooleanAttribute('${att.terraformName}')`;
     }
+    if (type.isList) {
+      return `(this.getListAttribute('${att.terraformName}') as any) as ${att.type.name}`;
+    }
     if (process.env.DEBUG) {
       console.error(
         `The attribute ${JSON.stringify(att)} isn't implemented yet`
       );
     }
+
     return `this.interpolationForAttribute('${att.terraformName}') as any`;
   }
 

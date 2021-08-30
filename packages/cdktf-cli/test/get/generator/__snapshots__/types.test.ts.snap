@@ -58,7 +58,7 @@ export class BooleanList extends cdktf.TerraformResource {
   // foo_required - computed: false, optional: false, required: true
   private _fooRequired: boolean[];
   public get fooRequired() {
-    return this.interpolationForAttribute('foo_required') as any;
+    return (this.getListAttribute('foo_required') as any) as boolean[];
   }
   public set fooRequired(value: boolean[]) {
     this._fooRequired = value;
@@ -71,7 +71,7 @@ export class BooleanList extends cdktf.TerraformResource {
   // foo_optional - computed: false, optional: true, required: false
   private _fooOptional?: boolean[];
   public get fooOptional() {
-    return this.interpolationForAttribute('foo_optional') as any;
+    return (this.getListAttribute('foo_optional') as any) as boolean[];
   }
   public set fooOptional(value: boolean[]) {
     this._fooOptional = value;
@@ -335,7 +335,7 @@ export class ComputedComplexNestedResources extends cdktf.ComplexComputedList {
 
   // autoscaling_groups - computed: true, optional: false, required: false
   public get autoscalingGroups() {
-    return this.interpolationForAttribute('autoscaling_groups') as any;
+    return (this.getListAttribute('autoscaling_groups') as any) as ComputedComplexNestedResourcesAutoscalingGroups;
   }
 
   // remote_access_security_group_id - computed: true, optional: false, required: false
@@ -484,7 +484,7 @@ export class BlockTypeNestedComputedList extends cdktf.TerraformResource {
   // inputs - computed: false, optional: true, required: false
   private _inputs?: BlockTypeNestedComputedListInputs[];
   public get inputs() {
-    return this.interpolationForAttribute('inputs') as any;
+    return (this.getListAttribute('inputs') as any) as BlockTypeNestedComputedListInputs[];
   }
   public set inputs(value: BlockTypeNestedComputedListInputs[]) {
     this._inputs = value;
@@ -617,7 +617,7 @@ export class ComputedOptionalComplex extends cdktf.TerraformResource {
   // egress - computed: true, optional: true, required: false
   private _egress?: ComputedOptionalComplexEgress[];
   public get egress() {
-    return this.interpolationForAttribute('egress') as any;
+    return (this.getListAttribute('egress') as any) as ComputedOptionalComplexEgress[];
   }
   public set egress(value: ComputedOptionalComplexEgress[]) {
     this._egress = value;
@@ -733,7 +733,7 @@ export class DeeplyNestedBlockTypes extends cdktf.TerraformResource {
   // lifecycle_rule - computed: false, optional: true, required: false
   private _lifecycleRule?: DeeplyNestedBlockTypesLifecycleRule[];
   public get lifecycleRule() {
-    return this.interpolationForAttribute('lifecycle_rule') as any;
+    return (this.getListAttribute('lifecycle_rule') as any) as DeeplyNestedBlockTypesLifecycleRule[];
   }
   public set lifecycleRule(value: DeeplyNestedBlockTypesLifecycleRule[]) {
     this._lifecycleRule = value;
@@ -1063,7 +1063,7 @@ export class NumberList extends cdktf.TerraformResource {
   // foo_required - computed: false, optional: false, required: true
   private _fooRequired: number[];
   public get fooRequired() {
-    return this.interpolationForAttribute('foo_required') as any;
+    return (this.getListAttribute('foo_required') as any) as number[];
   }
   public set fooRequired(value: number[]) {
     this._fooRequired = value;
@@ -1076,7 +1076,7 @@ export class NumberList extends cdktf.TerraformResource {
   // foo_optional - computed: false, optional: true, required: false
   private _fooOptional?: number[];
   public get fooOptional() {
-    return this.interpolationForAttribute('foo_optional') as any;
+    return (this.getListAttribute('foo_optional') as any) as number[];
   }
   public set fooOptional(value: number[]) {
     this._fooOptional = value;
@@ -1944,7 +1944,7 @@ export class BlockTypeSetList extends cdktf.TerraformResource {
   // timeouts_set - computed: false, optional: true, required: false
   private _timeoutsSet?: BlockTypeSetListTimeoutsSet[];
   public get timeoutsSet() {
-    return this.interpolationForAttribute('timeouts_set') as any;
+    return (this.getListAttribute('timeouts_set') as any) as BlockTypeSetListTimeoutsSet[];
   }
   public set timeoutsSet(value: BlockTypeSetListTimeoutsSet[]) {
     this._timeoutsSet = value;
@@ -1960,7 +1960,7 @@ export class BlockTypeSetList extends cdktf.TerraformResource {
   // timeouts_list - computed: false, optional: true, required: false
   private _timeoutsList?: BlockTypeSetListTimeoutsList[];
   public get timeoutsList() {
-    return this.interpolationForAttribute('timeouts_list') as any;
+    return (this.getListAttribute('timeouts_list') as any) as BlockTypeSetListTimeoutsList[];
   }
   public set timeoutsList(value: BlockTypeSetListTimeoutsList[]) {
     this._timeoutsList = value;
