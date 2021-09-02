@@ -122,7 +122,7 @@
     "@types/ink": "^2.0.3",
     "@types/ink-spinner": "^3.0.0",
     "@types/inquirer": "^7.3.3",
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^27.0.1",
     "@types/json-schema": "^7.0.4",
     "@types/lodash.isequal": "^4.5.5",
     "@types/nock": "^11.1.0",
@@ -139,9 +139,9 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "ink-testing-library": "^2.0.0",
-    "jest": "^26.6.3",
+    "jest": "^27.1.0",
     "nock": "^13.0.7",
-    "ts-jest": "^26.4.4",
+    "ts-jest": "^27.0.5",
     "typescript": "^3.9.7"
   }
 }
