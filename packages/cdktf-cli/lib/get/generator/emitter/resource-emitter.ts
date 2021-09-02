@@ -45,7 +45,7 @@ export class ResourceEmitter {
 
   private emitStaticProperties(resource: ResourceModel) {
     this.code.line(
-      `public static readonly _tfResourceType = "${resource.terraformResourceType}";`
+      `public static readonly tfResourceType: string = "${resource.terraformResourceType}";`
     );
   }
 

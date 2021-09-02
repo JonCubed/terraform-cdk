@@ -14,7 +14,7 @@ export interface TestResourceConfig extends TerraformMetaArguments {
 }
 
 export class TestResource extends TerraformResource {
-  public static _tfResourceType = "test_resource";
+  public static readonly tfResourceType: string = "test_resource";
   public name: string;
   public names?: string[];
   public tags?: { [key: string]: string };

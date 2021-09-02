@@ -7,7 +7,7 @@ const terraformBinaryName = process.env.TERRAFORM_BINARY_NAME || "terraform";
 
 export interface TerraformConstructor {
   new (...args: any[]): any;
-  readonly _tfResourceType: string;
+  readonly tfResourceType: string;
 }
 export type SynthesizedStack = {
   resource: Record<string, any>;
@@ -35,7 +35,7 @@ function assertElementWithProperties(
   const items = Object.entries(stack[type] || {});
 
   const pass = items.some(([type, values]) => {
-    if (type !== itemType._tfResourceType) {
+    if (type !== itemType.tfResourceType) {
       return false;
     }
 
@@ -51,7 +51,7 @@ function assertElementWithProperties(
       pass,
       message: () =>
         `Expected ${
-          itemType._tfResourceType
+          itemType.tfResourceType
         } not to be present in synthesised stack with properties ${JSON.stringify(
           properties
         )}`,
@@ -60,7 +60,7 @@ function assertElementWithProperties(
     return {
       message: () =>
         `Expected ${
-          itemType._tfResourceType
+          itemType.tfResourceType
         } to be present in synthesised stack with properties ${JSON.stringify(
           properties
         )}`,

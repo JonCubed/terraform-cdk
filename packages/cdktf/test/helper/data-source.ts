@@ -15,7 +15,7 @@ export interface TestDataSourceConfig extends TerraformMetaArguments {
 }
 
 export class TestDataSource extends TerraformDataSource {
-  public static _tfResourceType = "test_data_source";
+  public static readonly tfResourceType: string = "test_data_source";
   public name: string;
 
   constructor(scope: Construct, id: string, config: TestDataSourceConfig) {

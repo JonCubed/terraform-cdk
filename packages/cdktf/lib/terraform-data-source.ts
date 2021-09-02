@@ -15,6 +15,7 @@ export class TerraformDataSource
   extends TerraformElement
   implements ITerraformResource, ITerraformDependable
 {
+  public static readonly tfResourceType: string = "test_data_source";
   public readonly terraformResourceType: string;
   public readonly terraformGeneratorMetadata?: TerraformProviderGeneratorMetadata;
 
